@@ -1,5 +1,5 @@
-<ver>24</ver>
-<efn>C:\Users\NIRS\Desktop\1.ProyectoNeuroception2023\Neuroception2023.exp</efn>
+<ver>23.1</ver>
+<efn>C:\Users\investigador\Desktop\ParadigmasFM\Neuroception2023\Neuroception2023.exp</efn>
 <author>Francisco Marcano</author>
 <con>
 <pause>P</pause>
@@ -20,32 +20,32 @@
 </con>
 <dbi></dbi>
 <dbs>button</dbs>
-<ddi>1</ddi>
+<ddi>0</ddi>
 <dds>
 <icm_profile></icm_profile>
 <orient>0</orient>
 <use_icm>0</use_icm>
 </dds>
-<ddv>AMD Radeon HD 5450</ddv>
+<ddv>Primary Display Driver</ddv>
 <depchg>1</depchg>
 <discard_windows_messages>0</discard_windows_messages>
 <display_status_window>1</display_status_window>
 <dmd>32</dmd>
-<dmh>800</dmh>
+<dmh>600</dmh>
 <dmr>60</dmr>
-<dmrf>60</dmrf>
-<dmw>1280</dmw>
+<dmrf>60.317</dmrf>
+<dmw>800</dmw>
 <docs>
 <args></args>
 <exfl></exfl>
 <lfn></lfn>
 </docs>
 <dp_list></dp_list>
-<dsd>C:\Users\NIRS\Desktop\1.ProyectoNeuroception2023\resources</dsd>
+<dsd>C:\Users\investigador\Desktop\ParadigmasFM\Neuroception2023\resources</dsd>
 <dwm>0</dwm>
 <dxv>8</dxv>
 <efs>
-<filename>C:\Users\NIRS\Desktop\1.ProyectoNeuroception2023\Neuroception2023.sce</filename>
+<filename>C:\Users\investigador\Desktop\ParadigmasFM\Neuroception2023\Neuroception2023.sce</filename>
 </efs>
 <exclusive_mouse>1</exclusive_mouse>
 <exp_version></exp_version>
@@ -133,35 +133,27 @@
 <pindex>4294967295</pindex>
 </chan>
 <chan>
-<dsdi>1</dsdi>
-<dsi>1</dsi>
-<dsn>Status port</dsn>
-<dst>0</dst>
-<il>1</il>
-<iv>0</iv>
-<ivm>0</ivm>
-<mask>15</mask>
 <name>Nirs_Trigger</name>
-<piai>LPT3</piai>
-<pian>Parallel Port</pian>
-<pihpn>LPT3</pihpn>
-<pindex>3</pindex>
-<ui>0</ui>
+<pindex>4294967295</pindex>
+</chan>
+<chan>
+<name>Nirs_serial</name>
+<pindex>4294967295</pindex>
 </chan>
 <chan>
 <ivm></ivm>
 <mask></mask>
 <mode>1</mode>
-<name>Nirs_serial</name>
-<piai>COM9</piai>
+<name>fMRI</name>
+<piai>COM3</piai>
 <pian>Serial Port</pian>
-<pihpn>COM9</pihpn>
+<pihpn>COM3</pihpn>
 <pin>1</pin>
-<pindex>2</pindex>
+<pindex>1</pindex>
 <sc>0</sc>
 </chan>
 </ip_chans>
-<lfd>C:\Users\NIRS\Desktop\1.ProyectoNeuroception2023\log</lfd>
+<lfd>C:\Users\investigador\Desktop\ParadigmasFM\Neuroception2023\log</lfd>
 <lnb>2</lnb>
 <lno>3</lno>
 <log>
@@ -195,7 +187,7 @@
 <out_encrypt_key></out_encrypt_key>
 <pi_list>
 <ip>
-<cn>Nirs_serial</cn>
+<cn>fMRI</cn>
 <lc>1</lc>
 </ip>
 </pi_list>
@@ -228,29 +220,12 @@
 <set_fifo>0</set_fifo>
 <spd>8</spd>
 <spp>none</spp>
-<spr>9600</spr>
+<spr>115200</spr>
 <sps>1</sps>
 </parameters>
 <piai>COM3</piai>
 <pian>Serial Port</pian>
 <pihpn>COM3</pihpn>
-</device>
-<device>
-<parameters>
-<cts>0</cts>
-<dsrin>0</dsrin>
-<dsrout>0</dsrout>
-<dtr>disable</dtr>
-<rts>disable</rts>
-<set_fifo>1</set_fifo>
-<spd>8</spd>
-<spp>none</spp>
-<spr>115200</spr>
-<sps>1</sps>
-</parameters>
-<piai>COM9</piai>
-<pian>Serial Port</pian>
-<pihpn>COM9</pihpn>
 </device>
 </port_devices>
 <rdl>
@@ -272,21 +247,21 @@
 <axis>
 <max>1000</max>
 <min>-1000</min>
-<name>Eje X</name>
+<name>X-axis</name>
 <restricted>1</restricted>
 <scale>1</scale>
 </axis>
 <axis>
 <max>1000</max>
 <min>-1000</min>
-<name>Eje Y</name>
+<name>Y-axis</name>
 <restricted>1</restricted>
 <scale>1</scale>
 </axis>
 <axis>
 <max>1000</max>
 <min>-1000</min>
-<name>Rueda</name>
+<name>Wheel</name>
 <restricted>1</restricted>
 <scale>1</scale>
 </axis>
@@ -300,13 +275,8 @@
 <device>
 <device_type>3</device_type>
 <dx_device_type>19</dx_device_type>
-<name>Teclado</name>
+<name>Keyboard</name>
 <unique_id>1</unique_id>
-</device>
-<device>
-<device_type>3</device_type>
-<dx_device_type>0</dx_device_type>
-<name>HID Keyboard Device</name>
 </device>
 <device>
 <abs_axis>
@@ -351,6 +321,82 @@
 <name>HID-compliant mouse</name>
 </device>
 <device>
+<abs_axis>
+<dead_zone>0</dead_zone>
+<max>1000</max>
+<min>-1000</min>
+<name>X-axis</name>
+<saturation>1</saturation>
+</abs_axis>
+<abs_axis>
+<dead_zone>0</dead_zone>
+<max>1000</max>
+<min>-1000</min>
+<name>Y-axis</name>
+<saturation>1</saturation>
+</abs_axis>
+<axis>
+<max>1000</max>
+<min>-1000</min>
+<name>X-axis</name>
+<restricted>1</restricted>
+<scale>1</scale>
+</axis>
+<axis>
+<max>1000</max>
+<min>-1000</min>
+<name>Y-axis</name>
+<restricted>1</restricted>
+<scale>1</scale>
+</axis>
+<axis>
+<max>1000</max>
+<min>-1000</min>
+<name>Wheel</name>
+<restricted>1</restricted>
+<scale>1</scale>
+</axis>
+<device_type>2</device_type>
+<dx_device_type>0</dx_device_type>
+<max_raw_pos>65535</max_raw_pos>
+<min_raw_pos>0</min_raw_pos>
+<name>HID-compliant mouse 1</name>
+</device>
+<device>
+<device_type>3</device_type>
+<dx_device_type>0</dx_device_type>
+<name>Standard PS/2 Keyboard</name>
+</device>
+<device>
+<device_type>4</device_type>
+<dx_device_type>17</dx_device_type>
+<name>USB Audio CODEC </name>
+</device>
+<device>
+<device_type>4</device_type>
+<dx_device_type>17</dx_device_type>
+<name>USB Audio CODEC  1</name>
+</device>
+<device>
+<axis>
+<dead_zone>0</dead_zone>
+<max>1000</max>
+<min>-1000</min>
+<name>X Axis</name>
+<saturation>1</saturation>
+</axis>
+<axis>
+<dead_zone>0</dead_zone>
+<max>1000</max>
+<min>-1000</min>
+<name>Y Axis</name>
+<saturation>1</saturation>
+</axis>
+<device_type>1</device_type>
+<dx_device_type>20</dx_device_type>
+<name>CH 2 AXIS 5 INPUT CONTROL</name>
+</device>
+<device>
 <axis>
 <dead_zone>0</dead_zone>
 <max>1000</max>
@@ -388,7 +434,6 @@
 <srgs></srgs>
 <uwd>0</uwd>
 <vocab></vocab>
-<vosk_model></vosk_model>
 </speech>
 </device>
 <device>
@@ -508,7 +553,7 @@
 </sce>
 <sce>
 <overrides></overrides>
-<sfn>C:\Users\NIRS\Desktop\1.ProyectoNeuroception2023\Neuroception2023.sce</sfn>
+<sfn>C:\Users\investigador\Desktop\ParadigmasFM\Neuroception2023\Neuroception2023.sce</sfn>
 </sce>
 <sct>
 <capture_device>
@@ -518,7 +563,6 @@
 <closest_match>0</closest_match>
 <closest_match_max></closest_match_max>
 <closest_match_min>1, 16, 8000</closest_match_min>
-<dev_name>None</dev_name>
 <do_rec_vol>0</do_rec_vol>
 <freq></freq>
 <ignore_drops>1</ignore_drops>
@@ -558,7 +602,7 @@
 <use_dev_freq>0</use_dev_freq>
 <use_rewind_distance>0</use_rewind_distance>
 </sde>
-<sdv>Controlador primario de sonido</sdv>
+<sdv>Primary Sound Driver</sdv>
 <show_dis>0</show_dis>
 <show_parm>0</show_parm>
 <show_term>1</show_term>
@@ -583,7 +627,7 @@
 <swp>1</swp>
 <text_encoding>utf8</text_encoding>
 <trigger_mode>
-<cn>Nirs_serial</cn>
+<cn>fMRI</cn>
 <m>0</m>
 <v>1</v>
 <vt>0</vt>
